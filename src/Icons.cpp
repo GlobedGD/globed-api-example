@@ -10,6 +10,7 @@ class $modify(PlayLayer) {
         if (!PlayLayer::init(level, a, b))
             return false;
 
+        /// Add a keybind listener to invalidate icons and update them.
         this->addEventListener(
             KeybindSettingPressedEventV3(Mod::get(), "invalidate-kb"),
             [this](Keybind const& keybind, bool down, bool repeat, double time) {
@@ -21,9 +22,13 @@ class $modify(PlayLayer) {
     }
 
     void cycle() {
+        // Change the used cube icon to the next one
         auto& rsv = GameManager::get()->m_playerFrame;
         rsv = rsv.value() + 1;
+
+        // Tell other clients to fetch our icons again
         globed::api::net::invalidateIcons();
+        // Update our icons locally (e.g. in the progress bar icons)
         globed::api::game::updateLocalIcons();
     }
 };
