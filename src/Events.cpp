@@ -1,6 +1,6 @@
 #include <Geode/Geode.hpp>
-#include <globed/soft-link/API.hpp>
-#include <globed/core/Event.hpp>
+#include <dankmeme.globed2/soft-link/API.hpp>
+#include <dankmeme.globed2/core/Event.hpp>
 
 using namespace geode::prelude;
 

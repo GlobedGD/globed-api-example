@@ -19,7 +19,5 @@ add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
 
 setup_geode_mod(${PROJECT_NAME})
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/geode-deps/dankmeme.globed2/include)
-
 CPMAddPackage("gh:dankmeme01/dbuf@1.1.0")
 target_link_libraries(${PROJECT_NAME} dbuf)

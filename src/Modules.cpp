@@ -1,7 +1,7 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PlayLayer.hpp>
-#include <globed/soft-link/Module.hpp>
-#include <globed/core/Event.hpp>
+#include <dankmeme.globed2/soft-link/Module.hpp>
+#include <dankmeme.globed2/core/Event.hpp>
 
 using namespace geode::prelude;
 

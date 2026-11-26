@@ -1,13 +1,13 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PlayLayer.hpp>
 
-#include <globed/soft-link/API.hpp>
+#include <dankmeme.globed2/soft-link/API.hpp>
 
 using namespace geode::prelude;
 
 class $modify(PlayLayer) {
-    bool init(GJGameLevel* level, bool a, bool b) {
-        if (!PlayLayer::init(level, a, b))
+    bool init(GJGameLevel* level, bool a) {
+        if (!PlayLayer::init(level, a))
             return false;
 
         /// Add a keybind listener to invalidate icons and update them.
